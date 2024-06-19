@@ -179,6 +179,10 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
 
 **And done!** The button you set up with the custom action will now execute the exploit every time you press it!
 
+## Start using your PS4 browser
+1. edit the run.sh and insert `--web`
+2. in your ps4 browser go to `http://YOUR_TV_IP:7796` and press START
+
 ## How to run GoldHEN on PS4 9.00 / 11.00 using PPLGPwn
 1. Download `goldhen.bin` from [goldhen directory](https://github.com/llbranco/PPLGPwn/tree/main/goldhen_USB) 
 
@@ -193,7 +197,7 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
 
     2. trigger stage2.bin from SiSTR0 which will look for `goldhen.bin` on the inserted USB stick
 
-    3. stage2.bin will copy `goldhen.bin` from the USB stick to `/data/GoldHEN/payloads/goldhen.bin` to your console's hard drive.
+    3. stage2.bin will (automaticaly) copy `goldhen.bin` from the USB stick to `/data/GoldHEN/payloads/goldhen.bin` to your console's hard drive. (again: it's auto, u don't need to do it manually)
 
          **Note:** From this point on, you shouldn't need the USB stick the next time you want to run the exploit, as you now have a local copy of goldhen on your hard drive.  
         (If you use the USB stick in the future, it will overwrite the local copy again. Probably useful for updates of goldhen etc.)
