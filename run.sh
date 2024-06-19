@@ -31,7 +31,7 @@ RUNNING
 luna-send -a webosbrew -f -n 1 luna://com.webos.notification/createToast '{"sourceId":"webosbrew","message": "<b>PPLGPwn!</b><br/>Starting your Jailbreak.<br/>by:  llbranco, kodeine & contributors"}'
 
 chmod +x ./pppwn
-./pppwn --interface $interface --fw $firmver --stage1 $stage1 --stage2 $stage2 --auto-retry -nw
-echo "./pppwn --interface $interface -fw $firmver --stage1 $stage1 --stage2 $stage2 --auto-retry -nw"
+./pppwn --interface $interface --fw $firmver --stage1 $stage1 --stage2 $stage2 --auto-retry
+echo "./pppwn --interface $interface -fw $firmver --stage1 $stage1 --stage2 $stage2 --auto-retry"
 
 luna-send -a webosbrew -f -n 1 luna://com.webos.notification/createToast '{"sourceId":"webosbrew","message": "<h3>PPLGPwned!</h3><br/>Done, enjoy! ;)"}'
