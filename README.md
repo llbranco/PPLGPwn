@@ -1,3 +1,4 @@
+![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/b616c0d8-5623-45f7-b089-4cefb4ff9399)
 # PPLGPwn
 A method of running PPPwn on rooted LG TV's.
 This method uses the C++ version of PPPwn, made by xfangfang, the link to the repo it's this one:
