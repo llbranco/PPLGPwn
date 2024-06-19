@@ -215,8 +215,15 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
 [Hackster](https://www.hackster.io/news/this-hack-is-a-game-changer-9e6cf59f82ed),
 [Kotaku](https://kotaku.com/ps4-playstation-4-jailbreak-hack-lg-smart-tv-method-1851485229)
 
+# Plans
+- better sh installer, web installer or usb installer (need a lot of research)
+- an option on the installer to choose between: "Start on boot", "web server", "mapped key on your remote" or "manual start"
+- Notifications on your tv on/off (config on install)
+- Route TV WiFi to PS4
+- option to choose between: GoldHen, VTX-Hen and/or GoldHen Lite
+
 # NOTES
-**!! This exploit is made for LG TV's with the armv7 architecture, I'm not sure if it works on other architectures !!**
+**!! This exploit is made for LG TV's or Fox TV's with the armv7/aarch64 architecture, I'm not sure if it works on other architectures or brands !!**
 
 To find out your TV chip architecture connect to your TV via SSH and run `uname -m`
 
