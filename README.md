@@ -158,10 +158,10 @@ If the exploit works, you should see an output via SSH similar to the following.
 2.
 insert this lines in the last line save and reboot the tv
 ```
-cd /media/internal/downloads/PPLGPwn-main
-./start.sh
+cd /media/internal/downloads/PPLGPwn
+./run.sh
 ```
-follow Modded's warfare step-by-step guide 
+If you updated from my previous version, I noticed that you **must update** the start path
 
 
 ## Run PPLGPwn with a single press on your TV remote
