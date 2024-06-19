@@ -1,32 +1,204 @@
-# PPLGPwn (llbranco mod) only for fw1100
-Based on: https://github.com/zauceee/PPLGPwn
-
-A method of executing PPPwn through rooted LGTV's
+# PPLGPwn
+A method of running PPPwn on rooted LG TV's.
+This method uses the C++ version of PPPwn, made by xfangfang, the link to the repo it's this one:
+https://github.com/xfangfang/PPPwn_cpp
 
 >[!IMPORTANT]
-> me and [zauceee](https://github.com/zauceee) (aka kodeine) decided to work and focus on just one project, we have the same goals and working together we will have much more to offer than separately.
-> 
-> If you liked the project, consider following our most updated version at:
-https://github.com/zauceee/PPLGPwn
-> 
-> I will keep this project open but only as an option for just 1 firmware (11.00) or maybe for testing proposes.
-
->`LIMITED SUPPORT` to [Fox Electronics](https://foxelectronics.rs/), u may need to [manually replace the pppwn binary](https://nightly.link/xfangfang/PPPwn_cpp/workflows/ci.yaml/main/aarch64-linux-musl.zip) if it is aarch64
->
+>`LIMITED SUPPORT` to [Fox Electronics](https://foxelectronics.rs/) with WebOS
 > (thx to **Aljelja** for the feedback)
 
-This method is using the C++ version of PPPwn, made by xfangxfang [PPPwn_cpp](https://github.com/xfangfang/PPPwn_cpp)
+It provides a new way to jailbreak your PS4, using a rooted LG TV.
+For more information on which firmwares are supported, check out the link above.
 
-> [!CAUTION]
-> **This project is not compatible with Roku tv, Amazon Fire Stick, Samsung tv or Android tv**
-> .
-> 
-> **Will it ever be compatible?**
-> 
-> I'm not sure, I can't guarantee it, but I don't exclude the possibility
-> 
-> I can't test it (and consequently cant port to it) 'coz I don't have access to any of these devices :(
-> 
+## If you liked my project and want to help me, consider buying me a coffee
+<a href='https://ko-fi.com/J3J4Y2DQ4' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dllbranco%26type%3Dpatrons&style=flat-square)](https://patreon.com/llbranco)
+
+## Changes compared to [zauceee/PPLGPwn](https://github.com/zauceee/PPLGPwn) and [FabulosoDev/PPLGPwn](https://github.com/FabulosoDev/PPLGPwn)
+- use curl instead of wget to download files
+- automatic download of stage1.bin & stage2.bin based on chosen PS4 firmware version (thx to FabulosoDev for that)
+- Sistro's stage2
+
+Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@PSGO](https://github.com/PSGO) and all contributors.
+
+## Requirements
+- Rooted LG TV
+- Ethernet cable
+- Device to connect to the TV through SSH (PC: [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) or [WebOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop) / Android: [ConnectBot](https://play.google.com/store/apps/details?id=org.connectbot)])
+- default ssh password: `alpine`
+- [follow this if you can't log in](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f)
+
+## Video Guides (outdated but still work) thx to [Michael Crump](https://www.youtube.com/@mbcrump) and [Modded Warfare](https://www.youtube.com/@MODDEDWARFARE) to sharing our project
+[![guide](https://img.youtube.com/vi/BIeljeDINqk/0.jpg)](https://www.youtube.com/watch?v=BIeljeDINqk)[![guide](https://img.youtube.com/vi/zYoesrUsIj8/0.jpg)](https://www.youtube.com/watch?v=zYoesrUsIj8)
+
+
+## Jailbreaking your LG TV
+To run PPLGPwn you'll need to root your LG TV, the root itself it supported by a couple of models, check both exploits to see if your TV is capable of doing so, more steps on how to root it and enable SSH aswell are available there:
+#### [Dejavuln](https://github.com/throwaway96/dejavuln-autoroot)
+#### [Root my TV](https://rootmy.tv/) All firmware released since mid-2022 is patched to this method.
+
+## Install & run PPLGPwn
+
+After jailbreaking your own TV (ironically, we are using a jailbroken TV to jailbreak another device 😁), you need to connect to your TV via SSH and download and run `install.sh` using this command:
+
+```
+curl -fsSLO https://github.com/llbranco/PPLGPwn/raw/main/install.sh && chmod +x ./install.sh && ./install.sh
+```
+
+### On your PS4:
+1. Connect your PS4 to your TV using the Ethernet port
+
+2. Go to `Settings` and then `Network`
+
+3. Select `Set Up Internet connection` and choose `Use a LAN Cable`
+
+4. Choose `Custom` setup and choose `PPPoE` for `IP Address Settings`
+
+5. Enter anything for `PPPoE User ID` and `PPPoE Password`
+
+6. Choose `Automatic` for `DNS Settings` and `MTU Settings`
+
+7. Choose `Do Not Use` for `Proxy Server`
+
+8. Press the `X` button on your controller on `Test Internet Connection`
+
+ALWAYS wait for your console to display the message `Cannot connect to network: (NW-31274-7)` before attempting this PPPOE injection again.
+
+If the exploit fails or the PS4 crashes, you can skip the internet setup and just click on `Test Internet Connection`.
+
+If the exploit works, you should see an output via SSH similar to the following. In addition you should see `Cannot connect to network` followed by `PPPwned` displayed as notification on your PS4, or vice versa.
+
+```sh
+[+] PPPwn - PlayStation 4 PPPoE RCE by theflow
+[+] args: interface=enp0s3 fw=1100 stage1=stage1/stage1.bin stage2=stage2/stage2.bin
+
+[+] STAGE 0: Initialization
+[*] Waiting for PADI...
+[+] pppoe_softc: 0xffffabd634beba00
+[+] Target MAC: xx:xx:xx:xx:xx:xx
+[+] Source MAC: 07:ba:be:34:d6:ab
+[+] AC cookie length: 0x4e0
+[*] Sending PADO...
+[*] Waiting for PADR...
+[*] Sending PADS...
+[*] Waiting for LCP configure request...
+[*] Sending LCP configure ACK...
+[*] Sending LCP configure request...
+[*] Waiting for LCP configure ACK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure NAK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure ACK...
+[*] Sending IPCP configure request...
+[*] Waiting for IPCP configure ACK...
+[*] Waiting for interface to be ready...
+[+] Target IPv6: fe80::2d9:d1ff:febc:83e4
+[+] Heap grooming...done
+
+[+] STAGE 1: Memory corruption
+[+] Pinning to CPU 0...done
+[*] Sending malicious LCP configure request...
+[*] Waiting for LCP configure request...
+[*] Sending LCP configure ACK...
+[*] Sending LCP configure request...
+[*] Waiting for LCP configure ACK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure NAK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure ACK...
+[*] Sending IPCP configure request...
+[*] Waiting for IPCP configure ACK...
+[+] Scanning for corrupted object...found fe80::0fdf:4141:4141:4141
+
+[+] STAGE 2: KASLR defeat
+[*] Defeating KASLR...
+[+] pppoe_softc_list: 0xffffffff884de578
+[+] kaslr_offset: 0x3ffc000
+
+[+] STAGE 3: Remote code execution
+[*] Sending LCP terminate request...
+[*] Waiting for PADI...
+[+] pppoe_softc: 0xffffabd634beba00
+[+] Target MAC: xx:xx:xx:xx:xx:xx
+[+] Source MAC: 97:df:ea:86:ff:ff
+[+] AC cookie length: 0x511
+[*] Sending PADO...
+[*] Waiting for PADR...
+[*] Sending PADS...
+[*] Triggering code execution...
+[*] Waiting for stage1 to resume...
+[*] Sending PADT...
+[*] Waiting for PADI...
+[+] pppoe_softc: 0xffffabd634be9200
+[+] Target MAC: xx:xx:xx:xx:xx:xx
+[+] AC cookie length: 0x0
+[*] Sending PADO...
+[*] Waiting for PADR...
+[*] Sending PADS...
+[*] Waiting for LCP configure request...
+[*] Sending LCP configure ACK...
+[*] Sending LCP configure request...
+[*] Waiting for LCP configure ACK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure NAK...
+[*] Waiting for IPCP configure request...
+[*] Sending IPCP configure ACK...
+[*] Sending IPCP configure request...
+[*] Waiting for IPCP configure ACK...
+
+[+] STAGE 4: Arbitrary payload execution
+[*] Sending stage2 payload...
+[+] Done!
+```
+
+## Run PPLGPwn when the TV boot
+1. edit this file to make the script runs on boot using `vi`
+```
+/var/lib/webosbrew/startup.sh
+```
+2.
+insert this lines in the last line save and reboot the tv
+```
+cd /media/internal/downloads/PPLGPwn-main
+./start.sh
+```
+follow Modded's warfare step-by-step guide 
+
+
+## Run PPLGPwn with a single press on your TV remote
+1. Head to the [Homebrew Store](https://www.webosbrew.org/) app and download [LG Input Hook](https://repo.webosbrew.org/apps/org.webosbrew.inputhook/)
+
+2. Open the LG Input Hook and go to the link the app gives you in a device that has a web browser (you can also do this on your TV, but it will take longer)
+
+3. Set this custom `Execute` action on any button you'd like:
+
+```
+cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
+```   
+
+4. Save your changes
+
+**And done!** The button you set up with the custom action will now execute the exploit every time you press it!
+
+## How to run GoldHEN on PS4 9.00 / 11.00 using PPLGPwn
+1. Download `goldhen.bin` from [goldhen directory](https://github.com/llbranco/PPLGPwn/tree/main/goldhen_USB) 
+
+2. Copy it to the root of an USB stick (formatted as FAT32 or exFAT)  
+(Do NOT rename it! The name should be exactly `goldhen.bin`)
+
+3. Plug the USB stick into your PS4
+    
+4. Run the PPPwn exploit  
+    At this point this should automatically:
+    1. run PPPwn stage1.bin
+
+    2. trigger stage2.bin from SiSTR0 which will look for `goldhen.bin` on the inserted USB stick
+
+    3. stage2.bin will copy `goldhen.bin` from the USB stick to `/data/GoldHEN/payloads/goldhen.bin` to your console's hard drive.
+
+         **Note:** From this point on, you shouldn't need the USB stick the next time you want to run the exploit, as you now have a local copy of goldhen on your hard drive.  
+        (If you use the USB stick in the future, it will overwrite the local copy again. Probably useful for updates of goldhen etc.)
+        
+    4. GoldHEN should start at this point
 
 ## Articles
 [Wololo](https://wololo.net/2024/05/14/pplgpwn-hack-your-ps4-with-your-tv/),
@@ -38,104 +210,11 @@ This method is using the C++ version of PPPwn, made by xfangxfang [PPPwn_cpp](ht
 [Hackster](https://www.hackster.io/news/this-hack-is-a-game-changer-9e6cf59f82ed),
 [Kotaku](https://kotaku.com/ps4-playstation-4-jailbreak-hack-lg-smart-tv-method-1851485229)
 
+# NOTES
+**!! This exploit is made for LG TV's with the armv7 architecture, I'm not sure if it works on other architectures !!**
 
+To find out your TV chip architecture connect to your TV via SSH and run `uname -m`
 
-## I installed this version. Is there any compatibility issue with switching to the version from his repository?
-absolutely not, you can change if you wish.
-
-After all, zauceee (aka kodeine) and I will be working together on the same repository
-
-## If you liked my project and want to help me, consider buying me a coffee
-<a href='https://ko-fi.com/J3J4Y2DQ4' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dllbranco%26type%3Dpatrons&style=flat-square)](https://patreon.com/llbranco)
-
-It provides a new way of jailbreaking your PS4, using a rooted LGTV.
-For more information of which firmwares are supported, visit the link above.
-
-## Requirements
-- Rooted LGTV
-- Ethernet cable
-- Device to connect to the TV thru ssh (You can use a phone) or https://github.com/webosbrew/dev-manager-desktop
-- default ssh password: `alpine`
-- [follow this if you can't log in](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f)
-
-
-## How can I do it?
-
-use one of this step-by-step guides
-
-[![guide](https://img.youtube.com/vi/BIeljeDINqk/0.jpg)](https://www.youtube.com/watch?v=BIeljeDINqk)[![guide](https://img.youtube.com/vi/zYoesrUsIj8/0.jpg)](https://www.youtube.com/watch?v=zYoesrUsIj8)
-
-
-and follow the instructions down bellow:
-
-Firstly you'll need to root your LGTV, the root itself it supported by a couple of models, check both exploits to see if your TV is capable of doing so, more steps on how to root it and activate SSH aswell are available there:
-### Root my TV: https://rootmy.tv/
-### Dejavuln: https://github.com/throwaway96/dejavuln-autoroot
-
-Secondly, after you jailbreak your own TV (ironic on how we use a jailbroken TV to jailbreak another device lol), you will need to follow the following steps thru ssh:
-
-1.
-```
-cd /media/internal/downloads
-wget https://github.com/llbranco/PPLGPwn/archive/refs/heads/main.zip
-unzip main.zip
-cd PPLGPwn-main
-chmod +x ./start.sh
-./start.sh
-```
-2.
-to make it run on the boot
-edit this file to make the script runs on boot
-```
-/var/lib/webosbrew/startup.sh
-```
-3.
-insert this lines in the last line (or after sshd server right under the "fi" if you prefer) save and reboot
-```
-cd /media/internal/downloads/PPLGPwn-main
-./start.sh
-```
-if you prefer to start the exploit by pressing a key
-follow Modded's warfare step-by-step
-
-
-### Alternative installer
-> [!WARNING]
-> One command Installer (unstable/beta/no warranty in any way/do at your own risk)
->
-> if you are brave (or lazy) you can test our beta installer (no guarantee)
-```
-curl -fsSL https://raw.githubusercontent.com/llbranco/PPLGPwn/master/install.sh -o install.sh && chmod +x install.sh && ./install.sh
-```
-
-
-### Steps to fix bus error: (Thanks to Modded Warfare)
-you can check if the cpu archtecture of your tv is aarch64
-```
-uname -m
-```
-download the new binary
-```
-wget https://nightly.link/xfangfang/PPPwn_cpp/workflows/ci.yaml/main/aarch64-linux-musl.zip
-```
-unzip it
-```
-unzip aarch64-linux-musl.zip
-```
-```
-tar -xzvf pppwn.tar.gz
-```
-
-
-### Connect your PS4 to your TV through the Ethernet port, and go in your PS4 set up LAN > PPPoE, and the exploit should be working!
-
-!! This exploit is made for TV's with the armv7, I'm unsure if it works on any other different arch, to know your TV chip architecture run ```uname -m``` !!
-
-!! This exploit stage2 runs SiStRo's payload !!
-
-## Plans ( https://github.com/zauceee/PPLGPwn )
-- Installer ( probably something based on https://github.com/stooged/PI-Pwn installer )
-- Start on boot
-- Notifications on your tv (config on install)
-- Retry on error
-- Route TV WiFi to PS4
+Thanks to the OpenLGTV and RootMyTV communities for giving us this LG TV jailbreak.  
+Thanks also to everyone in the PS4 jailbreaking community who gave us the exploits!
+And also thanks to all the contributors!
