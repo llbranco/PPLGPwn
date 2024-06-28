@@ -23,7 +23,7 @@ For more information on which firmwares are supported, check out the link above.
 Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@PSGO](https://github.com/PSGO) and all contributors.
 
 ## Requirements
-- Rooted LG TV
+- [Rooted LG TV](https://www.webosbrew.org/rooting/)
 - Ethernet cable
 - Device to connect to the TV through SSH (PC: [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) or [WebOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop) / Android: [ConnectBot](https://play.google.com/store/apps/details?id=org.connectbot)])
 - default ssh password: `alpine`
