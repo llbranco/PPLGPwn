@@ -231,3 +231,22 @@ To find out your TV chip architecture connect to your TV via SSH and run `uname 
 Thanks to the OpenLGTV and RootMyTV communities for giving us this LG TV jailbreak.  
 Thanks also to everyone in the PS4 jailbreaking community who gave us the exploits!
 And also thanks to all the contributors!
+
+# Personal Note
+I'm having some difficulties (in my personal life) that are preventing me from providing more frequent updates to the project... I'm struggling to deliver a functional autoupdate.
+
+Once the autoupdate is functional I intend to bring improvements to the code and other initialization options (NATIVE, I hope... even if not at first) of the script.
+
+TL;DR:
+
+My personal life is a complete mess, and the little free time I have to study shell script (that's right, I barely know shell script) is constantly interrupted by shouts, horns, and motorcycles with modified exhaust pipes making noise every 5 minutes or less, thanks to the most "demonic" and uncivilized neighbors you can imagine.
+
+I haven't been able to get a good night's sleep in... gosh, I don't even know how long... 3 or 4 years maybe.
+
+The only device I have to test is my TV, which I also use as a monitor for my PC, being my ONLY SCREEN! Bricking is not an option.
+
+I need more storage; my PC's hard drive is failing with a SMART error, and I'm broke. I don't have the money to invest in a new hard drive or more RAM.
+
+To maintain the little sanity I have left, I use the little free time I have to play games.
+
+I thank everyone for their understanding... and please make my neighbors shut up!
