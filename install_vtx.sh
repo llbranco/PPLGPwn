@@ -115,7 +115,7 @@ mkdir -p $default_dir
 curl -fsSL -o $default_dir/pppwn https://github.com/$repo/PPLGPwn/raw/main/pppwn_$cpu_arch
 curl -fsSL -o $default_dir/run.sh https://github.com/$repo/PPLGPwn/raw/main/run_vtx.sh
 curl -fsSL -o $default_dir/stage1.bin https://github.com/$repo/PPLGPwn/raw/main/stage1/$fmv/stage1.bin
-curl -fsSL -o $default_dir/stage2.bin https://github.com/$repo/PPLGPwn/raw/main/stage2/ps4hen/$fmv/stage2.bin
+curl -fsSL -o $default_dir/stage2.bin https://github.com/$repo/PPLGPwn/raw/main/ps4hen/$fmv/stage2.bin
 
 echo -e "Done!
 
