@@ -25,7 +25,7 @@ Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributo
 Version: v1.3 (${BLUE}by llbranco${NC})
 
 ${CYAN}-------
-RUNNING
+RUNNING on $cpu_arch
 -------${NC}
 "
 luna-send -a webosbrew -f -n 1 luna://com.webos.notification/createToast '{"sourceId":"webosbrew","message": "<b>PPLGPwn!</b><br/>Starting your Jailbreak.<br/>by:  llbranco, kodeine & contributors"}'
