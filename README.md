@@ -1,13 +1,9 @@
 ![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/17491e46-3b61-4d2b-ba56-5e5bbc7894f3)
 # PPLGPwn
 
-A method of running PPPwn on rooted LG TV's.
+A method of running PPPwn on rooted LG TV (potentially any jailbroken WebOS system)
 This method uses the C++ version of PPPwn, made by xfangfang, the link to the repo it's this one:
 https://github.com/xfangfang/PPPwn_cpp
-
->[!IMPORTANT]
->`LIMITED SUPPORT` to [Fox Electronics](https://foxelectronics.rs/) with WebOS
-> (thx to **Aljelja** for the feedback)
 
 It provides a new way to jailbreak your PS4, using a rooted LG TV.
 For more information on which firmwares are supported, check out the link above.
@@ -19,8 +15,9 @@ For more information on which firmwares are supported, check out the link above.
 - use curl instead of wget to download files
 - automatic download of stage1.bin & stage2.bin based on chosen PS4 firmware version (thx to FabulosoDev for that)
 - Sistro's stage2
+- PS4Hen-VTX support (new/WIP/test version)
 
-Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@PSGO](https://github.com/PSGO) and all contributors.
+Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@EchoStretch](https://github.com/EchoStretch) [@LightningMods](https://github.com/LightningMods) and all contributors.
 
 ## Requirements
 - [Rooted LG TV](https://www.webosbrew.org/rooting/)
@@ -44,6 +41,12 @@ After jailbreaking your own TV (ironically, we are using a jailbroken TV to jail
 
 ```
 curl -fsSLO https://github.com/llbranco/PPLGPwn/raw/main/install.sh && chmod +x ./install.sh && ./install.sh
+```
+
+## (Optional) Install & run the PS4HEN-VTX version
+I intend to merge the installers in the next updates
+```
+curl -fsSLO https://github.com/llbranco/PPLGPwn/raw/main/install_vtx.sh && chmod +x ./install_vtx.sh && ./install_vtx.sh
 ```
 
 ### On your PS4:
@@ -71,7 +74,7 @@ If the exploit works, you should see an output via SSH similar to the following.
 
 ```sh
 [+] PPPwn - PlayStation 4 PPPoE RCE by theflow
-[+] args: interface=enp0s3 fw=1100 stage1=stage1/stage1.bin stage2=stage2/stage2.bin
+[+] args: interface=eth0 fw=1100 stage1=stage1/stage1.bin stage2=stage2/stage2.bin
 
 [+] STAGE 0: Initialization
 [*] Waiting for PADI...
@@ -158,7 +161,7 @@ If the exploit works, you should see an output via SSH similar to the following.
 /var/lib/webosbrew/startup.sh
 ```
 2.
-insert this lines in the last line save and reboot the tv
+insert this lines in the last line save and reboot the tv (VTX version use a different path)
 ```
 cd /media/internal/downloads/PPLGPwn
 ./run.sh
@@ -169,19 +172,20 @@ If you updated from my previous version, I noticed that you **must update** the 
 ## Run PPLGPwn with a single press on your TV remote
 1. Head to the [Homebrew Store](https://www.webosbrew.org/) app and download [LG Input Hook](https://repo.webosbrew.org/apps/org.webosbrew.inputhook/)
 
-2. Open the LG Input Hook and go to the link the app gives you in a device that has a web browser (you can also do this on your TV, but it will take longer)
+2. Open the LG Input Hook and go to the link the app gives you in a device that has a web browser (you can also do this on your TV, but it will take longer) (for vtx version just change the location)
 
 3. Set this custom `Execute` action on any button you'd like:
 
 ```
 cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
-```   
+```
+
 
 4. Save your changes
 
 **And done!** The button you set up with the custom action will now execute the exploit every time you press it!
 
-## Start using your PS4 browser
+## Start using your PS4 browser (may not work properly)
 1. edit the run.sh and insert `--web`
 2. in your ps4 browser go to `http://YOUR_TV_IP:7796` and press START
 
@@ -205,6 +209,23 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
         (If you use the USB stick in the future, it will overwrite the local copy again. Probably useful for updates of goldhen etc.)
         
     4. GoldHEN should start at this point
+  
+## How to run PS4HEN-VTX on PS4 7.00 / 11.00 using PPLGPwn
+1. Copy the payload file `ps4-hen-xxxx-PPPwn-vtx-1.0xxx.bin` corresponding to the PS4 firmware to the root directory of USB drive exFAT. [PS4hen-vtx directory](https://github.com/llbranco/PPLGPwn/tree/main/ps4hen-vtx_USB)
+   
+2. and Rename the payload file to `payload.bin`.
+
+3. Plug the USB stick into your PS4
+
+4. Run the PPPwn exploit  
+    At this point this should automatically:
+    1. run PPPwn stage1.bin
+
+    2. trigger the stage2.bin vtx which will look for `payload.bin` on the inserted USB stick
+
+    3. I'm not sure if vtx stage2.bin copy anything to your console's hard drive.
+        
+4. VTXHEN should start at this point
 
 ## Articles
 [Wololo](https://wololo.net/2024/05/14/pplgpwn-hack-your-ps4-with-your-tv/),
@@ -220,7 +241,7 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
 - better sh installer, web installer or usb installer (need a lot of research)
 - an option on the installer to choose between: "Start on boot", "web server", "mapped key on your remote" or "manual start"
 - Notifications on your tv on/off (config on install)
-- Route TV WiFi to PS4
+- Route TV WiFi to PS4 ( 10% done )
 - option to choose between: GoldHen, VTX-Hen and/or GoldHen Lite
 
 # NOTES
