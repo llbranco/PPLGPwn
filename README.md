@@ -1,5 +1,6 @@
 ![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/17491e46-3b61-4d2b-ba56-5e5bbc7894f3)
 # PPLGPwn
+![image](https://github.com/llbranco/PPLGPwn/assets/5321071/a955697c-e292-44f4-be4f-609f0cdaffdf)
 
 A method of running PPPwn on rooted LG TV (potentially any jailbroken WebOS system)
 This method uses the C++ version of PPPwn, made by xfangfang, the link to the repo it's this one:
