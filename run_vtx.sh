@@ -1,6 +1,7 @@
 clear
 repo=llbranco
 default_dir=/media/internal/downloads/PPLGPwn-vtx
+cpu_arch=`uname -m`
 RED='\033[0;91m'
 GREEN='\033[0;92m'
 YELLOW='\033[0;93m'
@@ -26,7 +27,7 @@ Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributo
 Version: v1.3 VTX (${BLUE}modded by llbranco${NC})
 
 ${CYAN}-------
-RUNNING
+RUNNING on $cpu_arch
 -------${NC}
 "
 luna-send -a webosbrew -f -n 1 luna://com.webos.notification/createToast '{"sourceId":"webosbrew","message": "<b>PPLGPwn! VTX</b><br/>Starting your Jailbreak.<br/>by:  llbranco, kodeine & contributors"}'
