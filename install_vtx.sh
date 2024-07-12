@@ -40,33 +40,37 @@ please report any issue
 "
 
 reinstall=false
-cpu_arch=$(uname -m)
+cpu_arch=`uname -m`
+if [ -d /media/internal/downloads/PPLGPwn ]
+then
+  read -p "PPLGPwn already installed. Reinstall? [Y/N] " response
+  case "$response" in
+    [yY][eE][sS]|[yY])  echo "Removing PPLGPwn to reinstall..."
+	    pkill -f "pppwn"
+		pkill -f "pppwn_$cpu_arch"
+            rm -rf /media/internal/downloads/PPLGPwn
+                reinstall=true
+                    echo "Done!" ;;
+  esac
+else
+  reinstall=true
+fi
 
+if [ -d /media/internal/downloads/PPLGPwn-main ]
+then
+  read -p "PPLGPwn already installed. Reinstall? [Y/N] " response
+  case "$response" in
+    [yY][eE][sS]|[yY])  echo "Removing PPLGPwn to reinstall..."
+		pkill -f "pppwn"
+		pkill -f "pppwn_$cpu_arch"
+            rm -rf /media/internal/downloads/PPLGPwn-main
+                reinstall=true
+                    echo "Done!" ;;
+  esac
+else
+  reinstall=true
+fi
 
-# Function to handle removal and reinstallation
-    echo "Removing $1 to reinstall..."
-    pkill -f "pppwn"
-    pkill -f "pppwn_$cpu_arch"
-    rm -rf "$1"
-    reinstall=true
-    echo "Done!"
-
-# Array of directories to check
-array_dir=("$default_dir" "/media/internal/downloads/PPLGPwn-main")
-
-# Loop through directories
-for dir in "${array_dir[@]}"; do
-    if [ -d "$dir" ]; then
-        read -p "$(basename "$dir") already installed. Reinstall? [Y/N] " response
-        case "$response" in
-            [yY][eE][sS]|[yY])
-                reinstall_pppwn "$dir"
-                ;;
-        esac
-    else
-        reinstall=true
-    fi
-done
 
 #(re)install
 if [ "$reinstall" = true ]
