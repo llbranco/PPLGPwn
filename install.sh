@@ -22,7 +22,7 @@ echo -e "${GREEN}
 
 ${NC}
 Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributors${NC}, with ${RED}luv <3${NC}
-Version: v1.3 (${BLUE}modded by llbranco${NC})
+Version: v1.3.1 (${BLUE}modded by llbranco${NC})
 
 ${CYAN}-------
 INSTALLATION
@@ -83,7 +83,7 @@ fi
 echo -e "
 
 ${CYAN}-------
-Supported firmwares 9.00 9.60 10.00 11.00
+Supported firmwares 9.00 9.60 10.00 10.01 10.50 10.70 10.71 11.00
 Choose firmware version...
 -------${NC}
 "

@@ -22,7 +22,7 @@ echo -e "${GREEN}
 
 ${NC}
 Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributors${NC}, with ${RED}luv <3${NC}
-Version: v1.3 (${BLUE}by llbranco${NC})
+Version: v1.3.1 (${BLUE}by llbranco${NC})
 
 ${CYAN}-------
 RUNNING on $cpu_arch
