@@ -1,5 +1,5 @@
 ![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/17491e46-3b61-4d2b-ba56-5e5bbc7894f3)
-# PPLGPwn
+# PPLGPwn v1.3.1
 ![image](https://github.com/llbranco/PPLGPwn/assets/5321071/a955697c-e292-44f4-be4f-609f0cdaffdf)
 
 A method of running PPPwn on rooted LG TV (potentially any jailbroken WebOS system)
@@ -9,7 +9,7 @@ https://github.com/xfangfang/PPPwn_cpp
 It provides a new way to jailbreak your PS4, using a rooted LG TV.
 For more information on which firmwares are supported, check out the link above.
 
-### Se vc é brasileiro, tem um canal do youtube e gostária de gravar uma video tutorial, entre em contato comigo aqui pelo github ou pelo discord LLBRANCO
+### Se vc é brasileiro, tem um canal do youtube e gostaria de gravar uma video tutorial, entre em contato comigo aqui pelo github ou pelo discord LLBRANCO
 
 ## If you liked my project and want to help me, consider buying me a coffee
 <a href='https://ko-fi.com/J3J4Y2DQ4' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dllbranco%26type%3Dpatrons&style=flat-square)](https://patreon.com/llbranco)
