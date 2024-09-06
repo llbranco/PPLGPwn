@@ -271,4 +271,7 @@ https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-wr
 documentação incrivel de como rodar samba e ubuntu dentro do  webos
 https://ddscentral.org/2018/01/unusual-linux-devices-hacking-tvs-part1-the-story/
 https://ddscentral.org/2018/01/unusual-linux-devices-hacking-tvs-part-3-adding-samba-support-to-webos/
+
+projeto interessante
+https://github.com/Raezroth/Linux-ARM-Gaming-Chroot
  -->
