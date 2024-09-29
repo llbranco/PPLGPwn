@@ -1,4 +1,11 @@
+#!/usr/bin/env bash
 clear 
+
+# you can manually edit this file if you wanto to install in another firmware
+# just replace the 1100 to any firmware that you want (between 900~1100)
+fmv=1100
+
+# don't edit anithing else
 repo=llbranco
 RED='\033[0;91m'
 GREEN='\033[0;92m'
@@ -34,6 +41,8 @@ echo "thanks to FabulosoDev, this installer is based on his installer v1.2..."
 reinstall=true
 cpu_arch=`uname -m`
 
+echo "$cpu_arch"
+
 if [ -d /media/internal/downloads/PPLGPwn ]
 then
 	    pkill -f "pppwn"
@@ -51,6 +60,7 @@ then
         echo "Done!"
 fi
 
+echo "instalando "
 if [ $cpu_arch = "armv7" ] || [ $cpu_arch = "armv7l" ]
 	then
 	cpu_arch='armv7'
@@ -61,7 +71,7 @@ if [ $cpu_arch = "armv7" ] || [ $cpu_arch = "armv7l" ]
 			luna-send -a webosbrew -f -n 1 luna://com.webos.notification/createToast '{"sourceId":"webosbrew","message": "<b>Error:</b>Unsupported CPU architecture, please report onto the issues tab in the GitHub repo with your cpu arch!"}'
 	return
 fi
-fmv=1100
+
 
 mkdir -p /media/internal/downloads/PPLGPwn
 curl -fsSL -o /media/internal/downloads/PPLGPwn/pppwn https://github.com/$repo/PPLGPwn/raw/main/pppwn_$cpu_arch
