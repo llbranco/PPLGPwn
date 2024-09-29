@@ -34,3 +34,13 @@ https://github.com/webOS-TV-app-samples/HelloWorldService
 ## usb path
 
 /tmp/usb/sda/sda1/
+
+## random stuff
+
+https://github.com/itsRealM12C/launchlgtvapp/blob/main/index.html
+
+https://itsrealm12c.github.io/LaunchCheeringMode/
+
+https://dropbox.inf.re/webos-app-stub/ creates fake ipk
+
+
