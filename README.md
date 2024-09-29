@@ -19,6 +19,7 @@ For more information on which firmwares are supported, check out the link above.
 - automatic download of stage1.bin & stage2.bin based on chosen PS4 firmware version (thx to FabulosoDev for that)
 - Sistro's stage2
 - PS4Hen-VTX support (new/WIP/test version)
+- alternative installer using USB and no SSH required
 
 Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@EchoStretch](https://github.com/EchoStretch) [@LightningMods](https://github.com/LightningMods) and all contributors.
 
