@@ -22,6 +22,10 @@ https://www.webos-internals.org/wiki/Luna_Send
 
 https://www.banneret.nl/webos/documentation/all/dev-guide/mojo/db8-luna-send-examples.html
 
+commands https://www.webosbrew.org/pages/commands-cheatsheet.html
+
+https://gist.github.com/Informatic/1983f2e501444cf1cbd182e50820d6c1
+
 ## hello world service
 
 https://github.com/webOS-TV-app-samples/HelloWorldService
