@@ -5,7 +5,7 @@ clear
 # just replace the 1100 to any firmware that you want (between 900~1100)
 fmv=1100
 
-# don't edit anithing else
+# don't edit anything else
 repo=llbranco
 RED='\033[0;91m'
 GREEN='\033[0;92m'
