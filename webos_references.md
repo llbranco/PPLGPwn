@@ -37,6 +37,12 @@ https://github.com/webOS-TV-app-samples/HelloWorldService
 
 /tmp/usb/sda/sda1/
 
+## chroot
+
+https://forum.manjaro.org/t/howto-chroot-from-or-into-any-linux-distribution/34071
+
+https://ddscentral.org/2018/01/unusual-linux-devices-hacking-tvs-part-3-adding-samba-support-to-webos/
+
 ## random stuff
 
 https://github.com/itsRealM12C/launchlgtvapp/blob/main/index.html
