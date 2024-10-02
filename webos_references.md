@@ -26,6 +26,8 @@ commands https://www.webosbrew.org/pages/commands-cheatsheet.html
 
 https://gist.github.com/Informatic/1983f2e501444cf1cbd182e50820d6c1
 
+hdmi.cec https://www.webosose.org/docs/reference/ls2-api/com-webos-service-cec/
+
 ## hello world service
 
 https://github.com/webOS-TV-app-samples/HelloWorldService
