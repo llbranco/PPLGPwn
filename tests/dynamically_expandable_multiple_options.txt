@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# dynamically expandable multiple options by: llbranco
+
+# Function to create the notification with dynamic buttons
+options() {
+    # Fixed title and message
+    local title="<b>Dynamically expandable multiple options</b>"
+    local message="by: LLBRANCO"
+
+    # Initializes the JSON payload
+    payload="{\"message\":\"${title}<br/> ${message}\",\"buttons\":["
+
+    # Counts the number of buttons passed
+    num_buttons=$#
+
+    # Adds the buttons to the payload
+    index=1
+    while [ $index -le $num_buttons ]; do
+        button_name="${1}" # Button name
+        url="${2}"         # Download URL
+        filename="${3}"    # Filename
+
+        # Adds the button to the payload
+        button_payload="{\"label\":\"$button_name\", \"onclick\":\"luna://com.webos.service.downloadmanager/download\", \"params\":{\"target\":\"$url\", \"targetDir\":\"/media/internal/downloads/PPLGwn\", \"targetFilename\":\"$filename\"}}"
+
+        # Concatenates button_payload to the payload, adding a comma if it’s not the first button
+        if [ $index -eq 1 ]; then
+            payload="$payload$button_payload"
+        else
+            payload="$payload,$button_payload"
+        fi
+
+        # Advances to the next set of arguments
+        shift 3
+        index=$((index + 3))
+    done
+
+    # Closes the JSON
+    payload="$payload]}"
+
+    # Sends the notification
+    luna-send -n 1 -f -a com.webos.service.secondscreen.gateway luna://com.webos.notification/createAlert "$payload" >/dev/null
+
+    # Records the command and payload in teste_payload.txt
+    echo "Command sent:" > teste_payload.txt
+    echo "luna-send -n 1 -f -a com.webos.service.secondscreen.gateway luna://com.webos.notification/createAlert $payload" >> teste_payload.txt
+}
+
+# To call the function use "button name" "URLs" and "filename"
+# You can add as many buttons as you want, as long as they fit vertically on the TV screen; my TV limit is 10
+# You can use line breaks ending the line with "\"
+# Remember not to use "\" on the last line
+var_link="https://github.com/llbranco/PPLGPwn/raw/main/stage1"
+
+options "1" "$var_link/900/stage1.bin" "temp1.tmp" \
+        "2" "$var_link/960/stage1.bin" "temp2.tmp" \
+        "3" "$var_link/1000/stage1.bin" "temp3.tmp" \
+        "4" "$var_link/1001/stage1.bin" "temp4.tmp" \
+        "5" "$var_link/1050/stage1.bin" "temp5.tmp" \
+        "6" "$var_link/900/stage1.bin" "temp1.tmp" \
+        "7" "$var_link/960/stage1.bin" "temp2.tmp" \
+        "8" "$var_link/1000/stage1.bin" "temp3.tmp" \
+        "9" "$var_link/1001/stage1.bin" "temp4.tmp" \
+        "10" "$var_link/1050/stage1.bin" "temp5.tmp" \
+        "11" "$var_link/1070/stage1.bin" "temp6.tmp"
