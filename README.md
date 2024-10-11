@@ -258,11 +258,6 @@ Thanks to the OpenLGTV and RootMyTV communities for giving us this LG TV jailbre
 Thanks also to everyone in the PS4 jailbreaking community who gave us the exploits!
 And also thanks to all the contributors!
 
-# Personal Note
-I'm having some difficulties (in my personal life) that are preventing me from providing more frequent updates to the project... I'm struggling to deliver a functional autoupdate.
-
-Once the autoupdate is functional I intend to bring improvements to the code.
-
 <!--
 links úteis para atualizações futuras
 https://gist.github.com/Informatic/1983f2e501444cf1cbd182e50820d6c1
