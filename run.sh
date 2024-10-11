@@ -1,3 +1,4 @@
+cd /media/internal/downloads/PPLGPwn/
 clear
 cpu_arch=`uname -m`
 RED='\033[0;91m'
