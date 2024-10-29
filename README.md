@@ -20,6 +20,7 @@ For more information on which firmwares are supported, check out the link above.
 - Sistro's stage2
 - PS4Hen-VTX support (new/WIP/test version)
 - alternative installer using USB and no SSH required
+- compatible with GoldHEN 2.4B18
 
 Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@EchoStretch](https://github.com/EchoStretch) [@LightningMods](https://github.com/LightningMods) and all contributors.
 
