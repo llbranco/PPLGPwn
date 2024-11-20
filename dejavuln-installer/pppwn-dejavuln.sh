@@ -94,7 +94,7 @@ log_file="$pplgpwn_folder/pplgpwn_webos_info.log"
 # Path to the startup file and command
 startup_file="$pplgpwn_folder/startup.txt"
 no_startup_file="$pplgpwn_folder/no_startup.txt"
-startup_cmd="cd $pplgpwn_folder/PPLGPwn && chmod +x ./run.sh && ./run.sh"
+startup_cmd="cd $pplgpwn_folder && chmod +x ./run.sh && ./run.sh"
 startup_script="/var/lib/webosbrew/startup.sh"
 
 # The toast function allows the creation of toast notifications in the system
