@@ -22,7 +22,7 @@ For more information on which firmwares are supported, check out the link above.
 - alternative installer using USB and no SSH required
 - compatible with GoldHEN 2.4B18
 
-Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@EchoStretch](https://github.com/EchoStretch) [@LightningMods](https://github.com/LightningMods) and all contributors.
+Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR0](https://github.com/SiSTR0) [@xfangfang](https://github.com/xfangfang) [@zauceee](https://github.com/zauceee) [@FabulosoDev](https://github.com/FabulosoDev) [@EchoStretch](https://github.com/EchoStretch) [@LightningMods](https://github.com/LightningMods) [@MODDEDWARFARE](https://github.com/MODDEDWARFARE) and all contributors.
 
 ## Requirements
 - [Rooted LG TV](https://www.webosbrew.org/rooting/)
@@ -31,8 +31,8 @@ Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR
 - default ssh password: `alpine`
 - [follow this if you can't log in](https://gist.github.com/throwaway96/e811b0f7cc2a705a5a476a8dfa45e09f)
 
-## Video Guides (outdated but still work) thx to [Michael Crump](https://www.youtube.com/@mbcrump) and [Modded Warfare](https://www.youtube.com/@MODDEDWARFARE) to sharing our project
-[![guide](https://img.youtube.com/vi/BIeljeDINqk/0.jpg)](https://www.youtube.com/watch?v=BIeljeDINqk)[![guide](https://img.youtube.com/vi/zYoesrUsIj8/0.jpg)](https://www.youtube.com/watch?v=zYoesrUsIj8)
+## Video Guides thx to [Michael Crump](https://www.youtube.com/@mbcrump) and [Modded Warfare](https://www.youtube.com/@MODDEDWARFARE) to sharing our project
+[![guide](https://img.youtube.com/vi/NzBBfGnAWM0/0.jpg)](https://www.youtube.com/watch?v=NzBBfGnAWM0)[![guide](https://img.youtube.com/vi/zYoesrUsIj8/0.jpg)](https://www.youtube.com/watch?v=zYoesrUsIj8)
 
 
 ## Jailbreaking your LG TV
@@ -244,11 +244,12 @@ cd /media/internal/downloads/PPLGPwn && chmod +x ./run.sh && ./run.sh
 [Kotaku](https://kotaku.com/ps4-playstation-4-jailbreak-hack-lg-smart-tv-method-1851485229)
 
 # Plans
-- better sh installer, web installer or usb installer (need a lot of research)
+- better sh installer, web installer or
+- ~~usb installer~~ (DONE)
 - an option on the installer to choose between: "Start on boot", "web server", "mapped key on your remote" or "manual start"
 - Notifications on your tv on/off (config on install)
-- Route TV WiFi to PS4 ( 10% done )
-- option to choose between: GoldHen, VTX-Hen and/or GoldHen Lite
+- Route TV WiFi to PS4 ( 75% done, but still unstable... it's not here coz it may brick your tv )
+- ~~option to choose between: GoldHen, VTX-Hen and/or GoldHen Lite (done)~~
 
 # NOTES
 **!! This exploit is made for LG TV's or Fox TV's with the armv7/aarch64 architecture, I'm not sure if it works on other architectures or brands !!**
