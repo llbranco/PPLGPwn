@@ -9,8 +9,6 @@ https://github.com/xfangfang/PPPwn_cpp
 It provides a new way to jailbreak your PS4, using a rooted LG TV.
 For more information on which firmwares are supported, check out the link above.
 
-### Se vc é brasileiro, tem um canal do youtube e gostaria de gravar uma video tutorial, entre em contato comigo aqui pelo github ou pelo discord LLBRANCO
-
 ## If you liked my project and want to help me, consider buying me a coffee
 <a href='https://ko-fi.com/J3J4Y2DQ4' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dllbranco%26type%3Dpatrons&style=flat-square)](https://patreon.com/llbranco)
 
@@ -34,6 +32,8 @@ Special thanks to [@TheOfficialFloW](https://github.com/TheOfficialFloW) [@SiSTR
 ## Video Guides thx to [Michael Crump](https://www.youtube.com/@mbcrump) and [Modded Warfare](https://www.youtube.com/@MODDEDWARFARE) to sharing our project
 [![guide](https://img.youtube.com/vi/NzBBfGnAWM0/0.jpg)](https://www.youtube.com/watch?v=NzBBfGnAWM0)[![guide](https://img.youtube.com/vi/zYoesrUsIj8/0.jpg)](https://www.youtube.com/watch?v=zYoesrUsIj8)
 
+## Video Tutorial em Português Dublado por mim
+[![Guia em PTBR](https://img.youtube.com/vi/O-WSMLmb4P8/0.jpg)](https://youtu.be/O-WSMLmb4P8)
 
 ## Jailbreaking your LG TV
 To run PPLGPwn you'll need to root your LG TV, the root itself it supported by a couple of models, check both exploits to see if your TV is capable of doing so, more steps on how to root it and enable SSH aswell are available there:
