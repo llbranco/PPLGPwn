@@ -1,3 +1,21 @@
+#!/usr/bin/env bash
+
+# please use the dejavuln installer, this will not be mantained
+# for now this will be keepped as legacy to be removed in a future update
+#
+# PPLGPwn is a project created by zauceee (aka Kodeine) valeu mano.
+# I contributed to his project with some ideas
+# so I started my own fork 'cos at some point our project was aiming different settings/configs I guess
+# even tho we still share our ideas or even discuss some new features.
+#
+# FabulosoDev also have his fork of the project with some interesting features
+# some codes here, in the "installer.sh" or in the "run.sh" was made by him. 
+#
+# Thanks to:
+# @TheOfficialFloW @zauceee @FabulosoDev @SiSTR0 @xfangfang @EchoStretch @LightningMods @kmeps4 @ModdedWarfare @mbcrump and all contributors that made pppwn and PPLGPwn possible
+# - Jacob Clayden (https://jacobcx.dev/) for discovering DejaVuln
+
+
 clear 
 repo=llbranco
 RED='\033[0;91m'
@@ -22,14 +40,12 @@ echo -e "${GREEN}
 
 ${NC}
 Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributors${NC}, with ${RED}luv <3${NC}
-Version: v1.3.1 (${BLUE}modded by llbranco${NC})
+Version: v1.3.2 (${BLUE}modded by llbranco${NC})
 
 ${CYAN}-------
 INSTALLATION
 -------${NC}
 "
-
-echo "thanks to FabulosoDev this installer is based on his installer v1.2..."
 
 reinstall=false
 cpu_arch=`uname -m`
