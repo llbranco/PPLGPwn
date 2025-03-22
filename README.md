@@ -1,5 +1,6 @@
 ![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/17491e46-3b61-4d2b-ba56-5e5bbc7894f3)
-# PPLGPwn v1.3.1
+# PPLGPwn 
+## Legacy v1.3.2 / Dejavuln v1.4.1
 ![image](https://github.com/llbranco/PPLGPwn/assets/5321071/a955697c-e292-44f4-be4f-609f0cdaffdf)
 
 A method of running PPPwn on rooted LG TV (potentially any jailbroken WebOS system)
@@ -40,7 +41,7 @@ To run PPLGPwn you'll need to root your LG TV, the root itself it supported by a
 #### [Dejavuln](https://github.com/throwaway96/dejavuln-autoroot)
 #### [Root my TV](https://rootmy.tv/) All firmware released since mid-2022 is patched to this method.
 
-## Install & run PPLGPwn
+## Install & run PPLGPwn (legacy version)
 
 After jailbreaking your own TV (ironically, we are using a jailbroken TV to jailbreak another device 😁), you need to connect to your TV via SSH and download and run `install.sh` using this command:
 
