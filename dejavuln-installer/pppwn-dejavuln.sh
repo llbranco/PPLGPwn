@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# 
 # PPLGPwn is a project created by zauceee (aka Kodeine) valeu mano.
 # I contributed to his project with some ideas
 # so I started my own fork cos at some point our project was aiming different settings/configs I guess
@@ -9,15 +8,13 @@
 # FabulosoDev also have his fork of the project with some interesting features
 # some codes here, in the "installer.sh" or in the "run.sh" was made by him. 
 # 
-# 
 #
 # this script is partially based on dejavuln-autoroot
 # by throwaway96
 # https://github.com/throwaway96/dejavuln-autoroot
-# Copyright 2024. Licensed under AGPL v3 or later. No warranties.
 
 # Thanks to:
-# @TheOfficialFloW @zauceee @FabulosoDev @SiSTR0 @xfangfang @EchoStretch @LightningMods and all contributors that made pppwn and PPLGPwn possible
+# @TheOfficialFloW @zauceee @FabulosoDev @SiSTR0 @xfangfang @EchoStretch @LightningMods @kmeps4 @ModdedWarfare @mbcrump and all contributors that made pppwn and PPLGPwn possible
 # - Jacob Clayden (https://jacobcx.dev/) for discovering DejaVuln
 
 
@@ -47,31 +44,10 @@ echo -e "${GREEN}
 
 ${NC}
 Designed for LG webOS TVs! Ported by ${PURPLE}Kodeine${NC} & ${PURPLE}Contributors${NC}, with ${RED}luv <3${NC}
-Version: v1.4 (${BLUE}modded by LLBRANCO${NC}) 09-OCT-2024"
+Version: v1.4.1 (${BLUE}modded by LLBRANCO${NC}) 22-MAR-2025"
 
 sleep 3
 
-echo -e "
-${YELLOW}---- v1.4 changes ----
-New installation method supported: dejavuln
-
-This script is being built with compatibility for webpage installation in mind (similar to what rootmy.tv does).
-
-Now, all questions will be answered using the TV remote control via luna-service, so it's no longer necessary to answer through the SSH terminal (though if many users are interested, I can continue supporting SSH answers as well).
-																																	   
-
-Don't worry, the script can still be run via SSH—most of my tests are done through SSH.
-
-This is my first all-in-one (AiO) installer that allows selecting between multiple stage2 payloads (Goldhen, VTX, and Lightningmods), supporting multiple firmwares.
-
-It's very easy to install and/or update, almost as easy as having a built-in automatic updater.
-
-I've begun a debug function (though it's still rudimentary).
-
-The script can be started via SSH using a computer or smartphone, or directly on the TV through the music or photo player.
-
-Keep in mind that a high-quality USB drive is NECESSARY—generic or poor-quality devices may not work properly.
---------${NC}
 
 ${CYAN}--------
 Installing
@@ -496,8 +472,15 @@ while true; do
         fi
         break
     elif [ -f "$no_startup_file" ]; then
-        # If you find "no_startup.txt", just say it.
+        # If you find "no_startup.txt", remove it.
         toast "You selected that you dont want to load at startup"
+        sleep 2
+        if grep -Fxq "$startup_cmd" "$startup_script"; then
+            sed -i "\|$startup_cmd|d" "$startup_script"
+            toast "Startup command removed from $startup_script."
+        else
+            toast "No startup command found to remove."
+        fi
         break
     else
         # loop
