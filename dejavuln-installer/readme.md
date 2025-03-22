@@ -1,5 +1,5 @@
 ![pplgpwn_logo](https://github.com/llbranco/PPLGPwn/assets/5321071/17491e46-3b61-4d2b-ba56-5e5bbc7894f3)
-# PPLGPwn v1.3.1 dejavuln installer
+# PPLGPwn v1.4.1 dejavuln installer
 ![image](https://github.com/llbranco/PPLGPwn/assets/5321071/a955697c-e292-44f4-be4f-609f0cdaffdf)
 
 ## Requirements
@@ -7,7 +7,11 @@
 - Ethernet cable
 - a USB drive formatted as Fat32
 
-## there is no video yet
+## Video guide
+[![guide](https://img.youtube.com/vi/NzBBfGnAWM0/0.jpg)](https://www.youtube.com/watch?v=NzBBfGnAWM0)
+
+## Video Tutorial em Português Dublado por mim
+[![Guia em PTBR](https://img.youtube.com/vi/O-WSMLmb4P8/0.jpg)](https://youtu.be/O-WSMLmb4P8)
 
 ## Install & run PPLGPwn
 
