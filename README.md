@@ -265,6 +265,7 @@ And also thanks to all the contributors!
 links úteis para atualizações futuras
 https://gist.github.com/Informatic/1983f2e501444cf1cbd182e50820d6c1
 https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab
+https://github.com/SasaKaranovic/web-hid
 
 https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
