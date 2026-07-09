@@ -7,3 +7,6 @@ example 1
 
 example 2
 ![image](https://github.com/user-attachments/assets/0b97ead1-6b2e-45f5-bf61-6387f1c4e563)
+
+
+https://zfentom.github.io/playstation-linux-tutorial/ps4/internal-installation
